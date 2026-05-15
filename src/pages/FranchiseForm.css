@@ -1,0 +1,102 @@
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.btn-success:hover {
+  background-color: #198754 !important;
+}
+
+.btn-primary:hover {
+  background-color: #198754 !important;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+
+
+.progress-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Change Bootstrap default progress-bar color */
+.progress-bar {
+  background-color: #c95225 !important;
+}
+
+/* For your custom line */
+.progress-line {
+  position: absolute;
+  top: 18px;
+  /* aligns with circle center */
+  left: 0;
+  height: 4px;
+  background-color: #c95225 !important;
+  z-index: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.step-item {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  z-index: 1;
+}
+
+.circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px auto;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.circle.active {
+  background-color: #c95225;
+  border-color: #bd4316d6;
+
+  color: #fff;
+  box-shadow: 0 0 8px #c95125ce;
+}
+
+.circle.completed {
+  background-color: #198754;
+  color: #fff !important;
+  border: 0;
+}
+
+
+@media (max-width: 768px) {
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px auto;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    margin-top: 8px;
+  }
+
+}

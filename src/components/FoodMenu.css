@@ -1,0 +1,624 @@
+/* Container & Layout */
+.fx-wrapper {
+    max-width: 1096px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+/* Main Tabs Styling */
+.fx-main-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 20px;
+}
+
+.left-arrow {
+    margin-left: 25px;
+}
+
+
+
+.cxz-toggle-wrapper2 {
+    display: flex;
+    background-color: #fcca06;
+    border-radius: 50px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    gap: 5px;
+    max-width: 199px;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+.fx-nav-arrow:disabled {
+    background-color: #ccc;
+    /* Grey color */
+    color: #888;
+    cursor: not-allowed;
+    /* Red circle slash icon dikhayega */
+    opacity: 0.5;
+    transform: scale(0.95);
+    /* Thoda chota dikhega */
+}
+
+.fx-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 20;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffcd;
+}
+
+
+.fx-btn-main {
+    padding: 10px 50px;
+    border: 2px solid #0056b3;
+    cursor: pointer;
+    font-weight: bold;
+    background: white;
+    color: #0056b3;
+    transition: 0.3s;
+}
+
+.fx-btn-main:first-child {
+    border-radius: 30px 0 0 30px;
+}
+
+.fx-btn-main:last-child {
+    border-radius: 0 30px 30px 0;
+    border-left: none;
+}
+
+.fx-btn-main.fx-active {
+    background: #fac913;
+    color: #000;
+    border-color: #0056b3;
+}
+
+/* Horizontal Sub-Menu Styling */
+.fx-sub-nav {
+    border-top: 2px dotted #0056b3;
+    border-bottom: 2px dotted #0056b3;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+
+    margin-top: 50px;
+}
+
+.fx-sub-list {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px;
+    overflow-x: auto;
+}
+
+.fx-sub-item {
+    font-size: 12px;
+    font-weight: bold;
+    color: #0056b3;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: color 0.2s;
+    font-family: 'Levenim MT';
+}
+
+.fx-sub-item:hover,
+.fx-sub-active {
+    color: #0056b3;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.fx-icon img {
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin-left: 2px;
+}
+
+.fx-grid {
+      display: flex;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: relative;
+    height: 1420px;
+    gap: 40px;
+    padding: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.fx-grid::-webkit-scrollbar {
+    display: none;
+    /* Optional: Hides the scrollbar for a cleaner look */
+
+}
+
+.max-menu {
+    width: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.max-menu>img {
+    width: 100%;
+}
+
+.fx-card-content {
+    height: 242px;
+    padding: 0px 10px;
+}
+
+.fx-card {
+    flex: 0 0 324px;
+    position: relative;
+    transition: transform .3s ease;
+    margin-bottom: 7px;
+    height: 423px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fx-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.mmkj {
+    color: #005bb2;
+}
+
+.fx-sub-list::-webkit-scrollbar {
+    height: 0;
+}
+
+.fx-img-box {
+    position: relative;
+    border: 2px solid #0056b3;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    height: 387px;
+    align-items: center;
+    justify-content: center;
+}
+
+.fx-img {
+    width: 80%;
+    display: block;
+}
+
+.fx-card-title {
+    color: #0056b3;
+    font-size: 1.1rem;
+
+    font-family: 'levenim';
+    font-weight: 700;
+    text-align: left;
+    margin-top: 16px;
+}
+
+.fx-card-desc {
+    color: #005aac;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+    height: 57px;
+}
+
+
+/* Arrow Container */
+
+/* Individual Arrow Styling */
+.fx-nav-arrow {
+    background: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    font-family: monospace;
+}
+
+.fx-nav-arrow:hover {
+    background: #fac913;
+    color: #000;
+}
+
+/* Ensure the list doesn't have a scrollbar but remains scrollable */
+.fx-sub-list {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+.fx-sub-list::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.fx-nav-controls {
+    position: absolute;
+    top: 225px;
+    right: 19px;
+    display: flex;
+    gap: 0;
+    z-index: 10;
+    width: 99%;
+    justify-content: space-between;
+}
+
+/* Container to center the toggle */
+.cxz-toggle-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* The outer shell of the toggle */
+.cxz-toggle-wrapper {
+    display: flex;
+    background-color: #fcca06;
+    border-radius: 50px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    gap: 5px;
+}
+
+/* Individual items/links */
+.cxz-toggle-item {
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #0056ac;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    display: inline-block;
+    font-family: 'levenim';
+}
+
+/* Hover effect for non-active */
+.cxz-toggle-item:hover {
+    color: #0056ac;
+    background-color: #d4ac0d;
+}
+
+/* For small screens */
+@media (max-width: 480px) {
+    .cxz-toggle-item {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+    .fx-nav-controls {
+        position: absolute;
+        top: 185px;
+        right: 16px;
+        display: flex;
+        gap: 0;
+        z-index: 0;
+        width: 99%;
+        justify-content: space-between;
+    }
+
+     .fx-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        padding: 15px;
+    }
+
+    .fx-icon img {
+        width: 16px;
+        height: 16px;
+        display: block;
+        margin-left: 2px;
+    }
+
+    .fx-icon {
+        position: absolute;
+        top: 34px;
+        right: 15px;
+        z-index: 20;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffcd;
+    }
+
+
+
+    .fx-card {
+        flex: 1;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+        min-height: 180px;
+        gap: 26px;
+        background: transparent;
+    }
+
+    /* Left Side: Content */
+    .fx-card-content {
+        height: 185px;
+        flex: 1;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 175px;
+    }
+
+    .fx-card-title {
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 8px;
+        color: #0056b3;
+    }
+
+    .fx-card-desc {
+        font-size: 14px;
+        height: auto;
+        /* Allow text to wrap naturally */
+        margin-bottom: 15px;
+        color: #0056b3;
+        line-height: 1.3;
+    }
+
+    /* Right Side: Image Box */
+    .fx-img-box {
+        flex: 0 0 140px;
+        /* Fixed width for the image container */
+        height: 140px;
+        border: 2px solid #0056b3;
+        border-radius: 20px;
+        /* More rounded like the image */
+        background-color: #f5f5de;
+        /* Match the inner card tint if needed */
+        position: relative;
+        overflow: visible;
+        /* To allow icons to pop if necessary */
+    }
+
+    .fx-img {
+        width: 85%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* The "Order now" link styling */
+    .order-link {
+        color: #0056b3;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    .order-link::after {
+        content: " \2192";
+        /* Right arrow → */
+        margin-left: 5px;
+    }
+
+    /* Normal state (jab ID nahi hai) */
+    .fx-sub-nav {
+        width: 100%;
+        background: #f5f5de;
+        /* transition zaroori hai animation ke liye */
+        transition: all 0.4s ease-in-out;
+        height: 37px;
+        /* Adjust to your nav's height */
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 1;
+
+    }
+
+
+    .fx-sub-nav {
+        border-top: 2px dotted #0056b3;
+        border-bottom: 2px dotted #0056b3;
+        margin-bottom: 30px;
+        padding: 10px 0;
+        margin-top: 50px;
+        position: sticky;
+        padding-right: 12px;
+    }
+
+
+    /* Use a class instead of an ID */
+    /* Base Sticky Styles */
+    .fx-sub-nav.is-sticky {
+        position: fixed;
+        top: 6px;
+        left: 0;
+        width: 100%;
+        z-index: 555;
+
+        /* Smooth Transition */
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+
+    }
+
+
+    /* 3. Hidden state (Only triggers at the bottom) */
+    .fx-sub-nav.is-sticky.fx-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        transform: translateY(-10px);
+        /* Slight slide up effect */
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .mobile-menu-ds {
+        margin-top: 45px;
+    }
+
+    /* Sticky state (jab ID active hai) */
+    #fixednav {
+        position: fixed;
+        top: 6px;
+        height: 42px;
+        left: 0;
+        width: 100%;
+        z-index: 555;
+        background: #f5f5de;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        /* Smooth entrance animation */
+        animation: slideDown 0.4s ease-in-out;
+    }
+
+    /* Slide down effect ka keyframes */
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+}
+
+.cxz-active {
+    background-color: #0056b3 !important;
+    /* Your Brand Color */
+    color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.fx-search-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 65px;
+}
+
+.fx-search-form {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    gap: 8px;
+    position: relative;
+    align-items: center;
+}
+.fx-search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #0051a9;
+  border-radius: 50px;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s;
+}
+.fx-search-input:focus {
+  border-color: #0056b3; /* Brand color */
+}
+.fx-search-btn {
+    background: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'levenim';
+    height: 50px;
+}
+.fx-clear-btn {
+  position: absolute;
+  right: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+}
+
+
+/* For small screens */
+@media (max-width: 480px) {
+
+.fx-search-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+}
+
+
+
+@media (max-width: 1080px) {
+
+.cxz-toggle-wrapper2 {
+    display: flex;
+    background-color: #fcca06;
+    border-radius: 50px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    gap: 5px;
+    max-width: 249px;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+}
+
+

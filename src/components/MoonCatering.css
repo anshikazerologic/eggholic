@@ -1,0 +1,122 @@
+/* --- DESKTOP VIEW (Original Logic) --- */
+.moon-catering-cd {
+    width: 80%;
+    height: 445px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: -40px;
+    position: relative;
+}
+
+#moon{
+    display: none;
+}
+.moon-card-wrapper {
+    position: relative;
+    width: 392px;
+}
+
+.moon-cateringBox, .moon-cateringBox-2, .moon-cateringBox-3 {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    list-style: none;
+    color: #f5f5de;
+    font-size: 10px;
+    top: 125px;
+    font-family: 'levenim';
+}
+
+/* Adjusting desktop margins for absolute boxes */
+.moon-cateringBox { margin-left: 92px; }
+.moon-cateringBox-2 { margin-left: 19px; } /* Relative to wrapper */
+.moon-cateringBox-3 { margin-left: -10px; } /* Relative to wrapper */
+
+.moon-price-p, .moon-price-p-2, .moon-price-p-3 {
+    position: absolute;
+    top: 346px;
+    color: #f5f5de;
+    font-family: 'Mambality';
+    text-transform: lowercase;
+    font-size: 47px;
+}
+
+.moon-price-p { margin-left: 87px; }
+.moon-price-p-2 { margin-left: 13px; }
+.moon-price-p-3 { margin-left: -15px; }
+
+.moon-lkjo {
+    font-size: 9px;
+    font-family: 'levenim';
+    text-align: center;
+    margin-top: -8px;
+}
+
+/* --- MOBILE & TABLET SWIPE VIEW --- */
+@media screen and (max-width: 1024px) {
+    .moon-catering-cd {
+        width: 100%;
+        height: auto;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important; /* Horizontally scrollable line */
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding: 20px;
+        margin-top: 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .catering-cd{
+        display: none !important;
+    }
+
+    #moon{
+    display: inline-block;
+}
+
+    /* Hide scrollbar for clean look */
+    .moon-catering-cd::-webkit-scrollbar {
+        display: none;
+    }
+
+    .moon-card-wrapper {
+        flex: 0 0 320px; /* Card width on mobile */
+        scroll-snap-align: center;
+        height: 500px;
+    }
+
+    .moon-card-wrapper img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Reposition text for swipe cards */
+    .moon-cateringBox, .moon-cateringBox-2, .moon-cateringBox-3 {
+        margin-left: 0 !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 180px;
+        text-align: left;
+        top: 110px;
+    }
+
+
+        .moon-price-p, .moon-price-p-2, .moon-price-p-3 {
+        margin-left: 0 !important;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 310px;
+        width: 100%;
+        text-align: center;
+        margin-top: 29px;
+    }
+
+
+    .mobil-cat{
+        margin-top: -10px;
+    }
+    
+}

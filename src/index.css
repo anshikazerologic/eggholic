@@ -1,0 +1,1042 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  /* Brand Colors */
+  --primary: #005BB2;
+  --secondary: #FAC90E;
+  --label: #E6FF55;
+  --blue: #0059ac;
+
+  /* Helper Backgrounds/Text (Optional) */
+  --bg-light: #F5F5DE;
+}
+
+
+.splash-container-x {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 99vw;
+  background-color: var(--bg-light);
+  overflow: hidden;
+  z-index: 990;
+  position: relative;
+  top: 0;
+  left: 0;
+
+}
+
+
+.splash-image-x {
+  width: 100%;
+  /* Aap size adjust kar sakte hain */
+  max-width: 774px;
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+  opacity: 1;
+
+}
+
+
+.splash-image-top-x {
+  width: 100%;
+  /* Aap size adjust kar sakte hain */
+  max-width: 1400px;
+  position: absolute;
+  top: -15px;
+  opacity: 1;
+  scale: 0.7;
+  margin-left: -20px;
+
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+
+  .splash-image {
+    width: 100%;
+    /* Aap size adjust kar sakte hain */
+    max-width: 750px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    opacity: 1;
+
+  }
+
+
+  .splash-image-top {
+    width: 100%;
+    max-width: 1770px;
+    position: absolute;
+    top: -40px;
+    opacity: 1;
+    scale: 0.7;
+
+
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 1040px) and (min-width: 0px) {
+
+  .splash-image {
+    width: 100%;
+    /* Aap size adjust kar sakte hain */
+    max-width: 790px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    opacity: 1;
+
+  }
+
+  .main-moon {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    margin-top: 70px;
+  }
+
+  .maxsd {
+    margin-top: 35px;
+  }
+
+  .moon-catering-cd-x {
+    width: 100%;
+    height: auto;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+  .splash-image-top-x {
+    width: 100%;
+    max-width: 1770px;
+    position: absolute;
+    top: -40px;
+    opacity: 1;
+    scale: 0.7;
+
+
+  }
+
+  .splash-container-x {
+    display: none;
+  }
+
+
+  .bhjk {
+    margin-top: 70px !important;
+    max-width: 1229px;
+  }
+
+  .splash-image-x {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 98% !important;
+    max-width: unset;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    z-index: 2;
+  }
+
+
+}
+
+
+.border-top {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background-image: url("/hori.svg");
+  background-repeat: repeat-x;
+  background-size: auto 16px;
+  transform: translateY(-100%);
+}
+
+
+.border-down {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background-image: url("/hori.svg");
+  background-repeat: repeat-x;
+  background-size: auto 16px;
+  transform: translateY(-100%);
+}
+
+.border-left {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  /* Ensure it starts at the top of the parent */
+  width: 100%;
+  /* Set a specific width for the line */
+  height: 100%;
+  /* Match parent height instead of viewport */
+  background-image: url("/ver.svg");
+  background-repeat: repeat-y;
+  background-size: auto 22px;
+
+}
+
+/* Sabhi boxes ke liye common style */
+
+.corner-box>svg {
+  width: 80%;
+}
+
+/* Individual positions */
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+
+.form-select {
+  background: transparent !important;
+}
+
+/* Desktop Loader Overlay */
+.desktop-loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #F5F5DE;
+  /* Match your site background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /* Stay on top of everything */
+}
+
+/* Simple CSS Spinner */
+.simple-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ffffff;
+  border-top: 5px solid #0056ac;
+  /* Change this to your brand color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Safety: Ensure it stays hidden on small screens even if state fails */
+@media (max-width: 1025px) {
+  .desktop-loader-container {
+    display: none !important;
+  }
+}
+
+.splash-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  /* Match this hex to the background color of your image for a seamless look */
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Using dvh (dynamic viewport height) handles mobile browser URL bars better */
+  height: 100dvh;
+  width: 100vw;
+  overflow: hidden;
+
+  /* Transition for the hook's isFading state */
+  opacity: 1;
+  transition: opacity 600ms ease-in-out;
+}
+
+.splash-image {
+  width: 100%;
+  height: 100%;
+
+  /* 'cover' scales the 360x740 image to fill any screen size */
+  /* It will crop slightly from the top/bottom or sides to prevent stretching */
+  object-fit: cover;
+
+  /* Keeps the center of your splash image (usually where the logo is) visible */
+  object-position: center;
+
+  /* Optional: helps with rendering crispness on high-res mobile screens */
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.splash-wrapper.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: "Mambality";
+  /* Root se path start karein */
+  src: url("/Mambality.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "levenim";
+  src: url("/levenim.ttf") format("truetype");
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Levenim MT";
+  src: url("/levenim-mt-bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer !important;
+    color: #0e5fae;
+}
+
+a:hover {
+  color: #ffcc00;
+}
+
+p {
+  font-family: "levenim" !important;
+}
+
+.sjsj {
+  color: #005bb2;
+  font-family: "Mambality";
+  text-transform: lowercase !important;
+}
+
+h2 {
+  font-family: "Mambality";
+  text-transform: lowercase !important;
+  font-size: 2.5rem !important;
+  font-weight: unset;
+}
+
+
+/* Container styling */
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-family: sans-serif;
+  z-index: 9999;
+  color: white;
+  font-family: 'levenim';
+  bottom: 20px;
+  position: absolute;
+}
+
+/* Text styling */
+.scroll-text {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Making the arrow using only borders */
+.pure-css-arrow {
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  /* Rotates a square to look like a V */
+  animation: bounce 2s infinite;
+}
+
+/* The bounce animation */
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  40% {
+    transform: translateY(-8px) rotate(45deg);
+  }
+
+  60% {
+    transform: translateY(-4px) rotate(45deg);
+  }
+}
+
+/* Hover effect */
+.scroll-container:hover .pure-css-arrow {
+  color: #3b82f6;
+  /* Blue-500 */
+}
+
+.bhjk {
+  margin-top: 0px !important;
+  max-width: 1289px;
+  padding: 2rem;
+  border: 2px solid #0056ac;
+  border-radius: 10px;
+  padding-top: 50px;
+}
+
+/* Basic reset for your brand colors */
+body {
+  background-color: var(--bg-light) !important;
+  color: var(--text-main) !important;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  /* Adds momentum/inertia on iOS */
+  overflow-x: hidden;
+}
+
+h1 {
+  color: var(--primary);
+}
+
+.label-badge {
+  background-color: var(--label);
+  color: var(--primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+button {
+  background-color: var(--secondary);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+.splash-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 99vw;
+  background-color: var(--bg-light);
+  overflow: hidden;
+  z-index: 990;
+  position: relative;
+  top: 0;
+  left: 0;
+
+}
+
+
+
+
+
+
+.border-top {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background-image: url("/hori.svg");
+  background-repeat: repeat-x;
+  background-size: auto 16px;
+  transform: translateY(-100%);
+}
+
+
+.border-down {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background-image: url("/hori.svg");
+  background-repeat: repeat-x;
+  background-size: auto 16px;
+  transform: translateY(-100%);
+}
+
+.border-left {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  /* Ensure it starts at the top of the parent */
+  width: 100%;
+  /* Set a specific width for the line */
+  height: 100%;
+  /* Match parent height instead of viewport */
+  background-image: url("/ver.svg");
+  background-repeat: repeat-y;
+  background-size: auto 22px;
+
+}
+
+/* Sabhi boxes ke liye common style */
+
+.corner-box>svg {
+  width: 80%;
+}
+
+/* Individual positions */
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+
+
+.corner-box {
+  width: 22px;
+  height: 22px;
+  background-color: var(--primary);
+  position: absolute;
+  border: 1px solid var(--secondary);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.border-right {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* Set width to match the actual thickness of your line/SVG */
+  width: 20px;
+  height: 100%;
+  background-image: url("/ver.svg");
+  background-repeat: repeat-y;
+  /* Anchor the background to the right */
+  background-position: right center;
+  background-size: auto 22px;
+}
+
+.lkji-j {
+  margin-left: 95px;
+}
+
+.main-moon {
+  width: 100%;
+  margin: 100px 0px;
+  margin-bottom: 200px;
+  overflow: hidden;
+}
+
+
+.maxsd {
+  margin-top: 15px;
+}
+
+.moon-catering-cd-x {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: -5px;
+  position: relative;
+  flex-direction: column;
+}
+
+.moon-card-wrapper-x {
+  position: relative;
+  width: auto;
+  transition: all ease 0.3s;
+
+}
+
+.moon-card-wrapper-x:hover {
+  transform: translateY(-3px);
+
+}
+
+.right-x {
+  margin-right: 20px;
+}
+
+.left-x {
+  margin-left: 20px;
+}
+
+
+.mnkjjopo {
+  margin-left: 90px;
+}
+
+.heading-me {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 67px;
+  flex-direction: column;
+}
+
+.kjhpo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.crsl {
+  display: none;
+}
+
+/* --- MOBILE & TABLET SWIPE VIEW --- */
+@media screen and (max-width: 1024px) {
+
+  /* 1. Target the actual container used in your JSX */
+  .kjhpo {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+
+    /* IMPORTANT: Left and Right padding ensures the first and last cards don't stick to the edges */
+    padding: 20px 0px;
+    padding-left: 18px;
+
+    margin-top: 0;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  small {
+    display: none;
+  }
+
+  /* 2. Add an invisible pseudo-element to create extra space at the end */
+  .kjhpo::after {
+    content: "";
+    flex: 0 0 -20px;
+    /* Adjust this value if the cut persists */
+  }
+
+  .kjhpo::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 3. Corrected card wrapper selector */
+  .moon-card-wrapper-x {
+    flex: 0 0 300px;
+    /* Fixed width for consistency */
+    scroll-snap-align: center;
+    height: auto;
+    position: relative;
+    /* Reset margins used in desktop */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .moon-card-wrapper-x img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* 4. Text positioning adjustments */
+  .moon-cateringBox,
+  .moon-cateringBox-2,
+  .moon-cateringBox-3 {
+    margin-left: 0 !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    text-align: left;
+    top: 28%;
+    /* Use percentage for better scaling on different phones */
+  }
+
+  .moon-price-p,
+  .moon-price-p-2,
+  .moon-price-p-3 {
+    margin-left: 0 !important;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 72%;
+    /* Adjusted to stay inside the SVG shape */
+    width: 100%;
+    text-align: center;
+    font-size: 38px;
+    /* Scale down slightly for smaller screens */
+  }
+
+  .mnkjjopo {
+    margin-left: 0 !important;
+    /* Reset the 90px desktop margin */
+  }
+}
+
+
+
+
+
+/* Animation Definitions */
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {}
+
+
+
+@media screen and (max-width: 1040px) and (min-width: 0px) {
+
+  .crsl {
+    padding: 15px;
+    margin: 10px 0px;
+    display: block;
+  }
+
+  .heading-me {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  main {
+    overflow: hidden;
+  }
+
+  .kjhpo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    justify-content: flex-start;
+  }
+
+  .main-moon {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    margin-top: 70px;
+  }
+
+  .maxsd {
+    margin-top: 35px;
+  }
+
+  .moon-catering-cd-x {
+    width: 100%;
+    height: auto;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding: 0px;
+    margin-top: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+
+
+  .splash-container {
+    display: none;
+  }
+
+  .bhjk {
+    margin-top: 50px !important;
+    max-width: 1229px;
+    border: 0;
+    padding: 20px;
+  }
+
+}
+
+
+
+
+
+
+/* =========================================================
+   MOBILE + TABLET PERFECT FIT
+   ========================================================= */
+
+@media screen and (max-width: 1024px) {
+
+  .splash-container-x {
+    display: flex !important;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-light);
+    padding: 0;
+  }
+
+  /* TOP IMAGE */
+  .splash-image-top-x {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 140%;
+    max-width: unset;
+    height: auto;
+
+    object-fit: contain;
+    z-index: 1;
+
+    scale: 1.08;
+  }
+
+
+
+  /* CORNER BOXES */
+  .corner-box {
+    width: 18px;
+    height: 18px;
+    z-index: 50;
+  }
+
+  .corner-box svg {
+    width: 70%;
+    height: auto;
+  }
+
+  /* TOP BORDER */
+  .border-top {
+    top: 0;
+    height: 12px;
+    background-size: auto 12px;
+    z-index: 20;
+  }
+
+  /* BOTTOM BORDER */
+  .border-down {
+    bottom: 0;
+    height: 12px;
+    background-size: auto 12px;
+    transform: none;
+    z-index: 20;
+  }
+
+  /* LEFT BORDER */
+  .border-left {
+    left: 0;
+    width: 14px;
+    background-size: auto 16px;
+    z-index: 20;
+  }
+
+  /* RIGHT BORDER */
+  .border-right {
+    right: 0;
+    width: 14px;
+    background-size: auto 16px;
+    z-index: 20;
+  }
+
+  /* SCROLL BUTTON */
+  .scroll-container {
+    bottom: 28px;
+    z-index: 100;
+    gap: 6px;
+  }
+
+  .scroll-text {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .pure-css-arrow {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE DEVICES
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  .splash-image-top-x {
+    width: 70% !important;
+    top: -25%;
+    scale: 1.15;
+    position: relative;
+    left: 10px;
+    right: 0;
+    transform: translateX(0%);
+  }
+
+  .splash-image-x {
+    width: 93% !important;
+    bottom: 0;
+  }
+
+  .corner-box {
+    width: 16px;
+    height: 16px;
+  }
+
+  .border-top,
+  .border-down {
+    height: 10px;
+    background-size: auto 10px;
+  }
+
+  .border-top {
+    top: 11px;
+  }
+
+  .border-left,
+  .border-right {
+    width: 10px;
+    background-size: auto 14px;
+  }
+
+  .scroll-container {
+    bottom: 10px;
+    display: none;
+  }
+
+  .splash-container-x {
+    display: flex !important;
+    width: 100%;
+    height: 65dvh;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-light);
+    padding: 0;
+    margin-top: 55px;
+  }
+
+  body{
+    overflow-x: scroll !important;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE OPTIMIZATION
+   ========================================================= */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .splash-image-top-x {
+    width: 80% !important;
+    top: -170px;
+    left: 0;
+    margin: 0 auto;
+    transform: translateX(0%);
+    position: relative;
+  }
+
+  .splash-image-x {
+    width: 85%;
+  }
+}
+
+
+.mask {
+  overflow: hidden; 
+  display: block;   
+  width: 100%;
+  position: relative; /* Safety for positioning */
+  /* Margin ensure karein taki boundary collapse na ho */
+  margin-bottom: 25px; 
+}

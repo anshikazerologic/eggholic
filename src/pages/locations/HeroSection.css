@@ -1,0 +1,81 @@
+/* Custom Fonts */
+@font-face {
+    font-family: "Houseofcards";
+    src: url("/assets/fonts/Houseofcards.woff2") format("woff2");
+}
+
+.landing-page {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+h1, h2 {
+    font-family: "Houseofcards", sans-serif;
+}
+
+/* --- Hero Parallax --- */
+.hero-parallax {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80') 
+                no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Parallax Effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* --- Order Button --- */
+.btn-loading {
+    background: #d15527;
+    min-width: 160px;
+    height: 50px;
+    padding: 0 30px;
+    border-radius: 25px;
+    font-weight: 700;
+    color: #fff !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-loading:hover {
+    background: #4b843d !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* --- SEO Content --- */
+.seo-content {
+    padding: 80px 0;
+    line-height: 1.8;
+}
+
+.seo-content h2 {
+    color: #d15527;
+    font-size: 2.5rem;
+}
+
+.seo-content p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero-parallax {
+        height: 50vh;
+        background-attachment: scroll; /* Better performance on mobile */
+    }
+    
+    .display-2 {
+        font-size: 2.5rem;
+    }
+}

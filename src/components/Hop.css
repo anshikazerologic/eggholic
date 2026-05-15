@@ -1,0 +1,207 @@
+.gfx-container {
+    width: 100%;
+    height: 506px;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image: url(/hopbg.svg);
+    background-size: contain;
+    margin-bottom: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.dcx {
+    width: 1440px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gfx-truckleft {
+    position: absolute;
+    left: 0;
+    margin-top: 90px;
+}
+
+.dx-box {
+    width: 600px;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: -32px;
+}
+
+
+.gfx-truckright {
+    position: absolute;
+    right: 0;
+    margin-top: 90px;
+}
+
+.gfx-truckright>img {
+    transform: scaleX(-1);
+    width: 400px;
+}
+
+.gfx-truckleft>img {
+    width: 400px;
+}
+
+.uk {
+    position: absolute;
+    width: 180px;
+    height: 440px;
+    margin-top: -573px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 427px;
+}
+
+.uk>ul {
+    margin-left: 15px;
+    margin-top: 20px;
+    color: white;
+    padding: 0;
+    font-family: 'levenim';
+}
+
+.us {
+    position: absolute;
+    width: 180px;
+    height: auto;
+    margin-top: -667px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 214px;
+}
+
+.us>ul {
+    margin-left: 35px;
+    margin-top: 30px;
+    color: white;
+    padding: 0;
+    font-family: 'levenim';
+}
+
+.us>ul>li {
+    font-size: 14px;
+}
+
+.canada {
+    position: absolute;
+    width: 175px;
+    height: auto;
+    margin-top: -577px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 5px;
+}
+
+.canada>ul {
+    margin-left: 18px;
+    margin-top: 20px;
+    color: white;
+    padding: 0;
+    font-family: 'levenim';
+}
+
+.canada>ul>li {
+    font-size: 14px;
+}
+
+.uk>ul>li>a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.canada>ul>li>a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.us>ul>li>a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Base styles for the links */
+.uk > ul > li > a,
+.canada > ul > li > a,
+.us > ul > li > a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease; /* Adds a smooth fade effect */
+}
+
+/* Hover state for all three */
+.uk > ul > li > a:hover,
+.canada > ul > li > a:hover,
+.us > ul > li > a:hover {
+    color: #ffcc00; /* Change this to your preferred hover color */
+}
+
+.uk > ul > li:hover,
+.canada > ul > li:hover,
+.us > ul > li:hover {
+    color: #ffcc00; /* Change this to your preferred hover color */
+}
+
+
+@media (max-width: 1024px) {
+
+
+    .gfx-truckright>img {
+        display: none;
+    }
+
+    .gfx-truckleft {
+        display: none;
+    }
+
+    .dcx {
+        width: 100%;
+        margin: 50px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         display: none;
+    }
+
+    .dcx>img {
+        width: 90%;
+    }
+
+
+    .dx-box {
+        width: auto;
+        position: absolute;
+        margin: 0 auto;
+        margin-top: -32px;
+        overflow: scroll;
+    }
+
+    .gfx-container {
+   display: none;
+    }
+
+    .gfx-truckright {
+        display: none;
+    }
+
+}

@@ -1,0 +1,242 @@
+/* Tabs Responsiveness */
+
+.formtopx{
+       border: 2px solid #0059ac;
+       padding: 20px;
+       border-radius: 10px;
+       padding-bottom: 30px;
+    }
+
+    .marghj{
+        margin-top: 80px;
+    }
+
+    .fx-frns {
+    width: 100%;
+    margin: 0 auto;
+
+
+ 
+}
+.fx-frns > img {
+    width: auto;
+    height: 90dvh;
+    display: flex;
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 1024px) and (min-width: 767px) {
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 1060px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0;
+    }
+
+    
+
+
+
+    .mn-svh {
+        margin-top: -50px;
+        overflow: hidden;
+    }
+
+    .mnbj {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        max-width: 1024px;
+    }
+
+    #location {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+    .card2 {
+        text-align: left;
+        margin: auto;
+        border-radius: 12px;
+        width: 305px;
+        height: 465px;
+        overflow: hidden;
+        border: 1px solid #005bb2;
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 768px) and (min-width: 0px) {
+
+    .formtop{
+        margin: 0;
+        padding: 0 !important;
+    }
+}
+
+
+/* Container Background */
+.ghk-container {
+
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.ghk-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stacked on mobile */
+  gap: 40px;
+  align-items: center;
+}
+
+/* Text Styling */
+.ghk-content-col {
+  flex: 1;
+}
+
+.ghk-title {
+    color: #0059ac;
+    font-family: "Levenim MT";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    text-transform: unset !important;
+    font-size: 60px !important;
+}
+
+.ghk-text {
+  color: #3e7fb2; /* Muted Blue-Grey */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Image Styling */
+.ghk-image-col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.ghk-image-frame {
+  border: 2px solid #0056b3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 500px;
+}
+
+.ghk-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ghk-hide-mobile {
+  display: none;
+}
+
+/* Desktop Styles (Tablets and Up) */
+@media (min-width: 768px) {
+  .ghk-wrapper {
+    flex-direction: row; /* Side by side */
+    align-items: flex-start;
+    padding: 60px 0;
+  }
+
+
+  .ghk-hide-mobile {
+    display: block;
+  }
+
+  .ghk-content-col {
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 1080px) {
+
+.ghk-title {
+    color: #0059ac;
+    font-family: "Levenim MT";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    text-transform: unset !important;
+    font-size: 32px !important;
+}
+.formtopx{
+       border: 0px solid #0059ac;
+       padding: 0px;
+       border-radius: 0px;
+       padding-bottom: 0px;
+    }
+
+    .marghj{
+        margin-top: 30px;
+    }
+
+    .container {
+        max-width: 1060px;
+        margin: 0 auto;
+        width: 90%;
+        padding: 0;
+    }
+
+
+}
+
+
+/* Styling for the country code select inside the input group */
+.country-code-select {
+    max-width: 85px; /* Keeps it small on mobile */
+    background-color: transparent;
+    border: 1px solid var(--bs-border-color);
+    font-size: 14px;
+    font-weight: 500;
+ 
+}
+
+/* Remove the rounded corners between the select and the input for a joined look */
+.input-group > .country-code-select {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: 10px;
+}
+
+
+
+.input-group > input[name="phone"] {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Ensure the border color matches your brand on focus */
+.country-code-select:focus, 
+.input-group input[name="phone"]:focus {
+    border-color: #0059ac;
+    box-shadow: 0 0 0 0.25rem rgba(0, 89, 172, 0.25);
+}
+
+/* Mobile Tweak: Ensure the row doesn't break on very small screens */
+@media (max-width: 400px) {
+    .country-code-select {
+        max-width: 75px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

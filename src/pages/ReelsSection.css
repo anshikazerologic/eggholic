@@ -1,0 +1,298 @@
+/* Section Layout */
+.fgh-section {
+
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-family: sans-serif;
+
+    margin-bottom: 200px;
+}
+
+.jhkdl {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.mshjdk {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.kkdh {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 10px 0px;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.kkdh>a>img {
+    width: 24px;
+    height: 24px;
+}
+
+.mshjdk>p {
+    font-size: 16px;
+    text-transform: capitalize;
+    margin: 0;
+    font-weight: 700;
+    color: #0059ac;
+    padding: 0px 15px;
+}
+
+#sh {
+    text-shadow: unset;
+}
+
+.fgh-title-kjj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Mambality';
+    flex-direction: column;
+    font-size: 196px !important;
+    color: #005bb2;
+    text-shadow: 0px 3px #fcca06;
+    text-transform: unset !important;
+}
+
+.fgh-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Grid Layout */
+.fgh-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Card Styling */
+.fgh-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 4 / 5;
+    background: #000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.fgh-card:hover {
+    transform: translateY(-5px);
+}
+
+.fgh-video-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Modal Styling */
+.fgh-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.fgh-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fgh-video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fgh-main-video {
+    width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.fgh-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .fgh-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+    }
+
+
+
+    .mshjdk>img {
+        display: none;
+    }
+
+    .mshjdk>p {
+        font-size: 12px;
+        text-transform: capitalize;
+        font-weight: 700;
+        color: #005bb2;
+        width: auto;
+        padding: 0;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 350px;
+    }
+
+    .mshjdk {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+
+    .fgh-title-kjj {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
+        font-size: 48px !important;
+    }
+
+    .jhkdl {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .fgh-title-kjj>img {
+        width: 90%;
+        margin-left: 0px;
+    }
+
+    .kkdh {
+        width: 120px;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 0px 0px;
+        justify-content: space-between;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .fgh-section {
+        margin-top: 90px;
+        font-family: sans-serif;
+        margin-bottom: 90px;
+    }
+}
+
+
+/* --- Desktop stays as Grid --- */
+.fgh-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+/* --- Mobile & Tablet Horizontal Scroll (Under 1025px) --- */
+@media screen and (max-width: 1025px) {
+    .fgh-container {
+        padding: 0; /* Container padding removed to let cards touch edges if needed */
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .fgh-grid {
+        display: flex;         /* Change grid to flex */
+        flex-wrap: nowrap;     /* Force single line */
+        overflow-x: auto;      /* Enable horizontal scroll */
+        scroll-snap-type: x mandatory; /* Snap effect */
+        gap: 20px;
+        padding: 20px;         /* Side padding for better look */
+        scrollbar-width: none;  /* Hide scrollbar Firefox */
+        -webkit-overflow-scrolling: touch; /* Smooth scroll iOS */
+    }
+
+    .fgh-grid::-webkit-scrollbar {
+        display: none; /* Hide scrollbar Chrome/Safari */
+    }
+
+    .fgh-card-wrapper {
+        flex: 0 0 300px;      /* Fixed width for each reel card */
+        scroll-snap-align: center; /* Snap to center */
+    }
+
+    .fgh-card {
+        aspect-ratio: 9 / 16; /* Reels look better in 9:16 on mobile */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Adjust Title and Subtitle for Mobile */
+    .fgh-title-kjj {
+        font-size: 60px !important; /* Adjusted from 196px */
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .mshjdk {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mshjdk > img {
+        display: none; /* Hide lines on mobile to save space */
+    }
+
+    .mshjdk > p {
+        font-size: 14px;
+        text-align: center;
+        max-width: 280px;
+    }
+
+    .fgh-section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}

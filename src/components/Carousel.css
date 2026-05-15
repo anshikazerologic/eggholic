@@ -1,0 +1,319 @@
+/* ═══════════════════════════════════════════════════════
+   Carousel.css
+   Cinematic dark theme — full-image cards with overlay text
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Google Fonts ──────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Jost:wght@300;400;500&display=swap");
+
+/* ── Design tokens ─────────────────────────────────────── */
+:root {
+    --card-radius: 12px;
+    --gap: 20px;
+    --arrow-size: 48px;
+    --transition: 430ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Base reset (scoped) ───────────────────────────────── */
+.carousel-section *,
+.carousel-section *::before,
+.carousel-section *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Section wrapper ───────────────────────────────────── */
+.carousel-section {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 90px 0 0;
+    font-family: var(--font-body);
+    color: var(--c-text);
+    /* background: var(--c-bg); */
+}
+
+/* ── Header ────────────────────────────────────────────── */
+.carousel-header {
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+.carousel-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin-bottom: 12px;
+}
+
+.carousel-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--c-text);
+}
+
+/* ── Stage ─────────────────────────────────────────────── */
+/*   Holds: arrow | viewport | arrow                        */
+.carousel-stage {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* ── Viewport ──────────────────────────────────────────── */
+/*   overflow:hidden ensures exactly --cpv cards show       */
+.carousel-viewport {
+    flex: 1;
+    overflow: hidden;
+    border-radius: var(--card-radius);
+    touch-action: pan-y;
+}
+
+/* ── Track ─────────────────────────────────────────────── */
+/*   CSS Grid driven by --cpv custom property               */
+.carousel-track {
+    display: flex;
+    gap: var(--gap);
+    transition: transform 0.1s ease;
+    will-change: transform;
+}
+
+/* ── Slide-in keyframes ────────────────────────────────── */
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(56px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-56px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply animation to each card when track has direction class */
+.carousel-track--next .carousel-card {
+    animation: slideFromRight var(--transition) both;
+    animation-delay: var(--delay, 0ms);
+}
+
+.carousel-track--prev .carousel-card {
+    animation: slideFromLeft var(--transition) both;
+    animation-delay: var(--delay, 0ms);
+}
+
+/* ── Card ──────────────────────────────────────────────── */
+.carousel-card {
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    border: none; 
+    cursor: pointer;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+    flex: 0 0 calc((100% - (var(--gap) * (var(--cpv) - 1))) / var(--cpv));
+    max-width: calc((100% - (var(--gap) * (var(--cpv) - 1))) / var(--cpv));
+}
+
+.carousel-card:hover{
+    transform: translateY(-5px);
+}
+
+
+/* ── Card image ────────────────────────────────────────── */
+.carousel-card__img {
+    
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+
+}
+
+
+/* ── Text overlay ──────────────────────────────────────── */
+/*   Gradient from transparent → deep black at the bottom   */
+.carousel-card__overlay {
+    text-align: left;
+    padding: 26px 10px 0;
+}
+
+
+
+/* ── Card heading ──────────────────────────────────────── */
+.carousel-card__heading {
+    font-family: 'levenim';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    color: #0059ac;
+    margin-bottom: 16px;
+}
+
+/* ── Card paragraph ────────────────────────────────────── */
+.carousel-card__para {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 140%;
+    /* Clamp to 2 lines to keep cards uniform */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;   /* ← यह line missing थी */
+    -webkit-box-orient: vertical;  /* ← यह भी missing थी */
+    overflow: hidden;
+    color: #0059ac;
+    font-family: 'levenim';
+
+}
+
+/* ═══════════════════════════════════════════════════════
+   Arrow Buttons  (desktop: visible | mobile: hidden)
+   ═══════════════════════════════════════════════════════ */
+.carousel-arrow {
+    flex-shrink: 0;
+    width: var(--arrow-size);
+    height: var(--arrow-size);
+    border-radius: 50%;
+    border: 1px solid var(--c-border);
+    background: #4182c0;
+    backdrop-filter: blur(8px);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+
+}
+
+.carousel-arrow svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.carousel-arrow:hover:not(.carousel-arrow--disabled) {
+    background: #FAC90E;
+    border-color: none;
+    color: black;
+
+}
+
+.carousel-arrow:active:not(.carousel-arrow--disabled) {}
+
+.carousel-arrow--disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-color: none;
+    color: #888888;
+}
+
+/* ═══════════════════════════════════════════════════════
+   Pagination Dots  (mobile: visible | desktop: hidden)
+   ═══════════════════════════════════════════════════════ */
+.carousel-dots {
+    display: none;
+    /* hidden by default; shown on mobile via media query */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.carousel-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #FAC90E;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    transition:
+        background 240ms ease,
+        border-color 240ms ease,
+        transform 240ms ease,
+        width 300ms ease,
+        border-radius 300ms ease;
+}
+
+/* Active dot morphs into a pill */
+.carousel-dot--active {
+    width: 24px;
+    border-radius: 4px;
+    background: #0059ac;
+    border-color: #0059ac;
+}
+
+.carousel-dot:hover:not(.carousel-dot--active) {
+    background: #FAC90E;
+ }
+
+/* ═══════════════════════════════════════════════════════
+   Responsive breakpoints
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Tablet (600px – 1023px): 2 cards ── */
+@media (max-width: 1220px) {
+    .carousel-section {
+        padding: 40px 0;
+        max-width: 1000px;
+    }
+
+    .carousel-card__heading {
+        font-size: 1.2rem;
+    }
+}
+
+/* ── Mobile (< 600px): 1 card, hide arrows, show dots ── */
+@media (max-width: 599px) {
+    .carousel-section {
+        padding: 40px 20px 0px;
+    }
+
+    /* Hide both arrow buttons on mobile */
+    .carousel-arrow {
+        display: none;
+    }
+
+    /* Remove side gap that arrows created */
+    .carousel-stage {
+        gap: 0;
+    }
+
+    /* Show pagination dots on mobile */
+    .carousel-dots {
+        display: flex;
+    }
+
+    .carousel-card__overlay {
+        
+
+    }
+
+    .carousel-card__heading {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .carousel-card__para {
+        font-size: 16px;
+    }
+}

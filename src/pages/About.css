@@ -1,0 +1,188 @@
+.xd-cover {
+    width: 100%;
+    max-width: 1300px;
+    height: 411px;
+    border-radius: 20px;
+    margin: 100px auto 0 auto;
+    position: relative;
+    /* Video ko align karne ke liye */
+    overflow: hidden;
+    /* Taki video corners se bahar na jaye */
+    border: 4px solid #0056ac;
+    ;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Yeh image-size: cover ki tarah kaam karta hai */
+    z-index: -1;
+    /* Taki content video ke upar dikhe */
+}
+
+
+.map-new {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 200px 0px;
+}
+
+.mapBoxv {
+    max-width: 1290px;
+    height: 389px;
+    margin: 0 auto;
+    width: 100%;
+    background-image: url("/map.svg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mapH {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.5;
+    font-family: 'Levenim MT' !important;
+}
+
+.mapcontent {
+    color: white;
+    font-size: 42px;
+    font-family: 'Levenim MT';
+    width: 500px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 0px) {
+
+
+
+    .xd-cover {
+        width: auto;
+        max-width: 1300px;
+        height: auto;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        border: 4px solid #0056ac;
+        ;
+        margin: 20px;
+        aspect-ratio: 16 / 9;
+        margin-bottom: 28px;
+        margin-top: 60px;
+    }
+
+    .timeline-section {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .timeline-content,
+    .timeline-image-wrapper {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .mapH {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+
+
+    .timeline-item.left,
+    .timeline-item.right {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        display: flex;
+    }
+
+    .timeline-desc {
+        opacity: 0.8;
+        width: auto;
+        color: #0056ac;
+        font-family: 'levenim';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .timeline-image-placeholder {
+        background-color: #0056ac;
+        ;
+        border-radius: 12px;
+        overflow: hidden;
+        width: auto;
+        height: auto;
+        border: 4px solid #0056ac;
+        ;
+    }
+
+    .timeline-title {
+        margin-bottom: 20px;
+        color: #0056ac;
+        ;
+        font-family: "Levenim MT";
+        font-style: normal;
+        font-weight: 700;
+        line-height: 37px;
+        letter-spacing: -1px;
+        text-transform: unset !important;
+        font-size: 30px !important;
+    }
+
+    .timeline-container {
+        max-width: 1338px;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .bg-video {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .mapBoxv {
+        max-width: 1290px;
+        height: 389px;
+        margin: 0 auto;
+        width: 100%;
+        background-image: url(/map.svg);
+        background-repeat: no-repeat;
+        /* Prevents the map from tiling */
+
+        /* Move X-axis here: */
+        background-position: -250px center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .map-new {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 100px 0px;
+    }
+
+}

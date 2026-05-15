@@ -1,0 +1,39 @@
+.fx-frns {
+    width: 100%;
+    margin: 0 auto;
+
+
+ 
+}
+.fx-frns > img {
+    width: auto;
+    height: 90dvh;
+    display: flex;
+    margin: 0 auto;
+}
+
+
+.bhjk {
+    margin-top: 0px !important;
+    max-width: 1289px;
+    padding: 2rem;
+    border: 2px solid #0056ac;
+    border-radius: 10px;
+    padding-top: 50px;
+}
+
+
+
+
+
+@media screen and (max-width: 1040px) and (min-width: 0px) {
+
+
+.bhjk {
+        margin-top: 50px !important;
+        max-width: 1229px;
+        border: 0;
+        padding: 20px;
+    }
+
+}

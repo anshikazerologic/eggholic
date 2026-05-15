@@ -1,0 +1,434 @@
+.dc-hall {
+    max-width: 1229px;
+    height: auto;
+    width: 100%;
+    margin: 70px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dc-hell-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:root {
+    --ox-blue: #4182c0;
+    --ox-bg: transparent;
+}
+
+.scroll-cf {
+    width: auto;
+    overflow-x: scroll;
+    display: flex;
+}
+
+.ox-container {
+    background-color: var(--ox-bg);
+    min-height: 50vh;
+    font-family: 'Arial Narrow', sans-serif;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.ox-grid {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1239px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-left: -39px;
+    margin-bottom: 30px;
+}
+
+.ox-card {
+    display: flex;
+    width: auto;
+    height: 517px;
+}
+
+.bluecard {
+    width: 280px;
+    height: 74px;
+    margin-top: -124px;
+    position: absolute;
+    margin-left: 52px;
+}
+.bluecard h3 {
+    font-family: 'levenim';
+    text-transform: capitalize;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+
+.bluecard p {
+    margin: 0;
+    font-size: 9px;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: -6px;
+    color: white;
+}
+
+/* Top Ornamental Section */
+.ox-top-ornament {
+    position: relative;
+    flex-grow: 1;
+    margin-bottom: 4px;
+}
+
+
+.ox-inner-border {
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ox-header-text {
+    font-weight: bold;
+    color: var(--ox-blue);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.ox-image-frame {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4px;
+    
+}
+
+.ox-dish-img {
+    width: 100%;
+}
+
+/* Stamp Footer */
+.ox-stamp-footer {
+    background-color: var(--ox-blue);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.ox-status-line {
+    letter-spacing: 1px;
+    margin-bottom: -4px;
+    color: #F5F5DE;
+    text-align: center;
+    font-family: "Levenim MT";
+    font-size: 19.231px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.ox-status-desc {
+    margin: 0;
+    color: #F5F5DE;
+    text-align: center;
+    font-family: "Levenim MT";
+    font-size: 10.679px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+/* Serrated Edge (Postage Stamp effect) */
+.ox-serrated-edge {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-image: radial-gradient(circle, #f4f4de 6px, transparent 7px);
+    background-size: 20px 20px;
+    background-position: center;
+}
+
+.ox-serrated-edge-2 {
+    position: absolute;
+    bottom: 82px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-image: radial-gradient(circle, #f4f4de 6px, transparent 7px);
+    background-size: 22px 22px;
+    background-position: center;
+}
+
+.ox-serrated-edge-3 {
+    position: absolute;
+    bottom: 30px;
+    left: -50px;
+    width: 30%;
+    height: 20px;
+    background-image: radial-gradient(circle, #f4f4de 6px, transparent 7px);
+    background-size: 20px 20px;
+    background-position: center;
+    rotate: 90deg;
+}
+
+.ox-serrated-edge-4 {
+    position: absolute;
+    bottom: 30px;
+    left: 284px;
+    width: 30%;
+    height: 20px;
+    background-image: radial-gradient(circle, #f4f4de 6px, transparent 7px);
+    background-size: 20px 20px;
+    background-position: center;
+    rotate: 90deg;
+}
+
+
+
+
+
+
+/* Ensure the container is the relative parent for arrows */
+.ox-container {
+    position: relative;
+    background-color: var(--ox-bg);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0 40px;
+    /* Add padding so arrows don't cover cards */
+}
+
+/* Hide scrollbar but keep functionality */
+.scroll-cf {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    gap: 10px;
+    /* Space between cards */
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scroll-cf::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+/* Arrow Styles */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--ox-blue);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.nav-arrow:hover {
+    background-color: #316699;
+}
+
+.nav-arrow.left {
+    left: -44px;
+}
+
+.nav-arrow.right {
+    right: -56px;
+}
+
+/* Ensure cards don't shrink */
+.ox-card {
+    flex: 0 0 auto;
+    /* Crucial: prevents cards from squeezing to fit screen */
+    width: 396px;
+    height: auto;
+}
+
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 375px) and (min-width: 0px) {
+  
+
+
+    .ox-grid {
+        flex-direction: column;
+        align-items: center;
+        max-width: unset;
+        margin: 0;
+                padding-left: 25px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  
+
+    .ox-card {
+        width: 100%;
+    }
+
+    .dc-hell-heading>img {
+        width: 90%;
+    }
+
+    .dc-hall {
+        max-width: 1229px;
+        height: auto;
+        width: 100%;
+        margin: 70px auto;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .scroll-cf {
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+        gap: 0px;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        margin-right: 0px;
+    }
+
+     .bluecard {
+        width: 280px;
+        height: 74px;
+        margin-top: -90px;
+        position: absolute;
+        margin-left: 38px;
+    }
+
+    .ox-dish-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .ox-card {
+        flex: 0 0 auto;
+        width: auto;
+        height: auto;
+    }
+
+    .ox-image-frame {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4px;
+    max-width: 366px;
+    height: 533px;
+}
+
+    .ox-grid {
+        flex-direction: column;
+        align-items: center;
+        max-width: unset;
+        margin: 0;
+                padding-left: 15px;
+    }
+
+.ox-container {
+    position: relative;
+    background-color: var(--ox-bg);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0 0px;
+}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 767px) {
+
+    .dc-hell-heading>img {
+        width: 80%;
+    }
+
+      .ox-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ox-card {
+        width: 100%;
+    }
+
+   
+
+    .dc-hall {
+        max-width: 1229px;
+        height: auto;
+        width: 100%;
+        margin: 70px auto;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .scroll-cf {
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+        gap: 0px;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        margin-right: -50px;
+    }
+
+    .bluecard {
+        width: 280px;
+        height: 74px;
+        margin-top: -100px;
+        position: absolute;
+        margin-left: 52px;
+    }
+
+    .ox-image-frame {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4px;
+    height: 600px;
+}
+
+    .ox-dish-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .ox-card {
+        flex: 0 0 auto;
+        width: 396px;
+        height: auto;
+    }
+}

@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /images/
+
+Disallow: /admin/
+Disallow: /login/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /search
+Disallow: /*?*
+
+# Sitemap
+Sitemap: https://eggholic.com/sitemap.xml

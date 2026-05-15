@@ -1,0 +1,406 @@
+:root {
+
+  --mx-blue: #005BB2;
+  --mx-yellow: #FAC90E;
+
+}
+
+/* Purani CSS mein ye add karein */
+
+.mask {
+  overflow: hidden; 
+  display: block;   
+  width: 100%;
+  position: relative; /* Safety for positioning */
+  /* Margin ensure karein taki boundary collapse na ho */
+  margin-bottom: 25px; 
+}
+
+
+.mx-description-mask {
+  overflow: hidden; 
+  display: block;   
+  width: 100%;
+  position: relative; /* Safety for positioning */
+  /* Margin ensure karein taki boundary collapse na ho */
+  margin-bottom: 25px; 
+}
+
+.mx-description {
+  color: var(--mx-blue);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 540px;
+  margin: 0 !important; /* Mask ke andar gap nahi chahiye */
+  display: block; /* Ensure it respects transform */
+  text-align: left;
+  /* Make sure opacity 0 na ho CSS se, Framer motion handle karega */
+}
+
+
+/* Container jo sentences ko hold karega */
+.mx-description-container {
+  max-width: 540px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+/* Har line ka apna mask */
+.mx-line-mask {
+  overflow: hidden; /* Boundary for each sentence */
+  display: inline;  /* Taki sentences flow karein, ya block agar har sentence new line chahiye */
+}
+
+.mx-description-line {
+  color: var(--mx-blue);
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: inherit; /* Aapka existing font */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 576px) {
+  .mx-description-container {
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+}
+
+.fggkl {
+  position: absolute;
+}
+
+.fgh-main-video-2 {
+  width: 100%;
+  max-height: 86vh;
+  object-fit: contain;
+  border-radius: 47px;
+      border: 10px solid #005bb2;
+}
+
+.mx-menu-btn>a>span {
+  margin-top: 3px;
+  display: block;
+  text-decoration: none;
+  color: #005bb2;
+}
+
+
+.mx-menu-btn>a {
+  margin-top: 3px;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+
+.mx-bite-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+}
+
+.mx-container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+
+.mx-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1252px;
+  justify-content: space-between;
+}
+
+
+/* Left Column Styling */
+.mx-col-left {
+  border: 5px solid var(--mx-black);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 646px;
+  height: 375px;
+}
+
+.mx-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+/* Right Column Styling */
+
+
+.mx-col-right {
+  border: 5px solid var(--mx-red);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 493px;
+}
+
+
+.mx-title {
+  font-family: 'serif';
+  font-size: 3.5rem;
+  line-height: 0.9;
+  color: var(--mx-blue);
+  margin-bottom: 10px;
+  font-weight: 900;
+  display: flex;
+}
+
+.mx-title>img {
+  width: 203px;
+}
+
+.mx-accent,
+.mx-more {
+  font-size: 5rem;
+}
+
+.mx-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mx-description {
+  color: var(--mx-blue);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  text-align: left;
+}
+
+/* Custom Shape Button */
+.mx-menu-btn {
+  background-image: url(/btn.svg);
+  color: var(--mx-blue);
+  font-size: 21.66px;
+  cursor: pointer;
+  margin: 0 auto;
+  /* clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%); */
+  transition: transform 0.2s ease;
+  margin: 0;
+  background-color: unset;
+  width: 220px;
+  height: 55px;
+  font-weight: 700;
+  font-family: 'levenim';
+}
+
+.mx-menu-btn-2 {
+  background-image: url(/btn-2.svg);
+  color: #f5f5de;
+  font-size: 21.66px;
+  cursor: pointer;
+  margin: 0 auto;
+  /* clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%); */
+  transition: transform 0.2s ease;
+  margin: 0;
+  background-color: unset;
+  width: 220px;
+  height: 55px;
+  font-weight: 700;
+  font-family: 'levenim';
+}
+
+.mx-menu-btn-2:hover {
+  transform: scale(1.05);
+}
+
+.mx-image-frame {
+  width: 646px;
+  position: relative;
+}
+
+
+.mx-menu-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+
+  .mx-col-left,
+  .mx-col-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mx-bite-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .mx-col-right {
+    border-top: none;
+    /* Mobile par overlap na dikhe */
+    padding: 40px 20px;
+  }
+
+  .mx-title {
+    font-size: 2.5rem;
+  }
+
+  .mx-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1252px;
+    justify-content: center;
+  }
+
+  .fggkl {
+    display: none;
+  }
+
+  .fgh-main-video-2 {
+    width: 100%;
+    max-height: 86vh;
+    object-fit: contain;
+    border-radius: 47px;
+    margin-top: 0px;
+    border: 8px solid #fbca10;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .mx-description{
+    margin-bottom: 40px;
+  }
+
+  .mx-image-frame {
+    border-radius: 20px;
+    width: auto;
+  }
+
+  .mx-col-right {
+    border-top: none;
+    padding: 40px 0px;
+  }
+
+  .mx-title {
+    font-size: 2rem;
+
+  }
+
+  .mx-bite-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mx-container {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    margin-top: 45px;
+  }
+
+  .kjld {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mx-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+}
+
+
+/* Tabs Responsiveness */
+@media screen and (max-width: 1024px) and (min-width: 767px) {
+
+  .mx-bite-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+
+
+  .mx-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1252px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+.mx-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+  .mx-container {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .mx-image-frame {
+    width: auto;
+    position: relative;
+  }
+
+  .mx-col-left {
+    border: 5px solid var(--mx-black);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 646px;
+    height: auto;
+  }
+
+  .mx-description-mask {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+}

@@ -1,0 +1,482 @@
+/* Variables for consistency */
+:root {
+  --dx-orange: #0059ac;
+  --dx-black: #0059ac;
+  --dx-white: #f5f5de;
+  --dx-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dx-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 8888;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dx-navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: #f4f4deb8;
+  backdrop-filter: blur(4px);
+}
+
+.dx-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Menu Links */
+.dx-desktop-menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.dx-nav-link {
+  text-decoration: none;
+  color: var(--dx-black);
+  font-weight: 500;
+  font-size: 20px;
+  transition: var(--dx-transition);
+  cursor: pointer;
+  font-family: 'Mambality';
+  text-transform: lowercase;
+}
+
+.dx-nav-link:hover {
+  color: #4182c0;
+}
+
+/* Custom Dropdown */
+.dx-dropdown {
+  position: relative;
+}
+
+
+.dx-dropdown:hover .dx-dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dx-dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f4f4de;
+  min-width: 180px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--dx-transition);
+  backdrop-filter: blur(5px);
+  margin-top: 20px;
+}
+
+.dx-dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--dx-black);
+  font-size: 20px;
+  transition: background 0.2s;
+  text-transform: lowercase;
+  font-family: 'Mambality';
+}
+
+.dx-dropdown-item:hover {
+  background: #f0f0d8;
+  color: var(--dx-orange);
+}
+
+/* Egg Button Animation */
+.dx-btn-loading {
+  background: var(--dx-black);
+  color: white;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: var(--dx-transition);
+  align-items: center;
+}
+
+.dx-btn-loading:hover {
+  background: var(--dx-orange);
+  transform: translateY(-2px);
+}
+
+.dx-btn-text {
+  display: block;
+  transition: transform 0.4s;
+  color: #F5F5DE;
+  text-align: center;
+  font-family: 'Mambality' !important;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: -2px;
+  text-transform: lowercase;
+}
+
+.dx-btn-loading.is-loading .dx-btn-text {
+  transform: translateY(0px);
+
+}
+
+.is-loading {
+  color: white;
+}
+
+/* Custom Hamburger */
+.dx-taco-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 5px;
+  background-color: transparent;
+}
+
+.dx-taco-bars span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--dx-black);
+  margin: 5px 0;
+  transition: var(--dx-transition);
+  border-radius: 2px;
+}
+
+.dx-actions {
+  width: 660px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dx-taco-toggle.is-active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.dx-taco-toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.dx-taco-toggle.is-active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Drawer */
+.dx-mobile-drawer {
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 250px;
+  height: 100vh;
+  background: #f5f5de;
+  z-index: 1001;
+  transition: var(--dx-transition);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dx-mobile-drawer.is-open {
+  left: 0;
+}
+
+.dx-mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100dvh;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: var(--dx-transition);
+}
+
+
+/* The container holding both the link and the menu */
+.dx-nav-item-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide the dropdown by default */
+.dx-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f5f5de;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  list-style: none;
+  padding: 10px 0;
+  font-family: 'Mambality';
+  text-transform: lowercase;
+  font-size: 18px;
+  margin: 0;
+  border-radius: 10px;
+
+}
+
+/* Show the menu when hovering over the container */
+.dx-nav-item-container:hover .dx-dropdown-menu {
+  display: block;
+}
+
+
+.dx-dropdown-menu li a {
+  color: #005bb2;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+}
+
+
+
+.dx-dropdown-menu li a:hover {
+  background: #f0f0d8;
+}
+
+.dx-mobile-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dx-drawer-link {
+  display: block;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: var(--dx-black);
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+  .dx-desktop-menu,
+  .dx-hide-mobile {
+    display: none;
+  }
+
+  .dx-taco-toggle {
+    display: block;
+  }
+
+  .dx-actions {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+
+  }
+
+.dx-drawer-header {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .hide-me{
+      display: none;
+    }
+
+    .dx-navbar {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    background: #f4f4deb8;
+    backdrop-filter: blur(4px);
+}
+
+.dx-drawer-title {
+        font-family: 'Mambality';
+        color: #005bb2;
+        text-transform: lowercase;
+        font-size: 24px;
+    }
+  .dx-drawer-link {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: var(--dx-black);
+    font-size: 18px;
+    font-family: 'levenim';
+  }
+
+}
+
+.dx-w-full {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.logo-mobile{
+  display:none;
+}
+
+.logo-desktop{
+  display:block;
+}
+
+  .mob-order {
+  display: none;
+}
+
+
+/* mobile */
+@media (max-width:1024px){
+
+  .dx-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 8888;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+  .logo-desktop{
+    display:none;
+  }
+
+  .mob-order {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-family: 'levenim';
+    color: #0056ac;
+    font-family: 'Mambality';
+    text-transform: lowercase;
+    line-height: 36px;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+  .logo-mobile{
+    display:block;
+    height: 30px;
+  }
+
+}
+
+
+/* Position the link relatively so the dot positions correctly */
+.dx-nav-link, .dx-drawer-link {
+  position: relative;
+}
+
+/* The Active Link style */
+.is-active-link {
+  color: #4182c0 !important; /* Optional: change text color too */
+}
+
+/* The Dot */
+.dx-nav-link.is-active-link::after {
+  content: "•";
+  position: absolute;
+  bottom: -14px; /* Adjust based on your header height */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: var(--dx-orange);
+}
+
+/* Mobile Drawer Dot (Optional: can be placed to the right instead of bottom) */
+.dx-drawer-link.is-active-link::after {
+  content: "•";
+  margin-left: 8px;
+  color: var(--dx-orange);
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+/* Ensure the dot doesn't appear on the 'More' dropdown trigger itself 
+   unless one of its children is active */
+.dx-dropdown:has(.is-active-link) .dx-nav-link::after {
+    content: "•";
+    /* same positioning as above */
+}
+
+
+/* Position the link relatively so the dot positions correctly */
+.dx-nav-link, .dx-drawer-link {
+  position: relative;
+}
+
+/* The Active Link style */
+.is-active-link {
+  color: #4182c0 !important; /* Optional: change text color too */
+}
+
+/* The Dot */
+.dx-nav-link.is-active-link::after {
+  content: "•";
+  position: absolute;
+  bottom: -12px; /* Adjust based on your header height */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: var(--dx-orange);
+}
+
+/* Mobile Drawer Dot (Optional: can be placed to the right instead of bottom) */
+.dx-drawer-link.is-active-link::after {
+  content: "•";
+  margin-left: 8px;
+  color: var(--dx-orange);
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+
+/* Ensure the dot doesn't appear on the 'More' dropdown trigger itself 
+   unless one of its children is active */
+.dx-dropdown:has(.is-active-link) .dx-nav-link::after {
+    content: "•";
+    /* same positioning as above */
+}
+
+
+/* Keep your global active dot as is */
+.dx-nav-link.is-active-link::after {
+  content: "•";
+  position: absolute;
+  bottom: -14px; 
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: var(--dx-orange);
+}
+
+
+
+/* FIX FOR "MORE" DROPDOWN: */
+/* We nudge the dot left (roughly half the width of the arrow) */
+.dx-dropdown .dx-nav-link.is-active-link::after {
+  left: calc(50% - 7px); 
+    bottom: -16px; 
+}
+
+

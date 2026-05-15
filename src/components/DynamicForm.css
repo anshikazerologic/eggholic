@@ -1,0 +1,120 @@
+:root {
+  --xd-blue: #0056a4;
+
+  --xd-input-bg: #f5f4e6;
+}
+
+.xd-form-wrapper {
+
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.xd-main-form {
+  width: 100%;
+  max-width: 900px;
+  border: 2px solid var(--xd-blue);
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.xd-fields-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.xd-field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.xd-full { flex: 1 1 100%; }
+.xd-half { flex: 1 1 calc(50% - 13px); }
+
+.xd-label {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.xd-required { color: var(--xd-blue); }
+
+.xd-input {
+  background-color: transparent;
+  border: 2px solid var(--xd-blue);
+  border-radius: 50px; /* Highly rounded as per design */
+  padding: 18px 25px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.xd-input::placeholder {
+  color: #ccc;
+}
+
+/* Custom Select styling */
+.xd-select-wrapper {
+  position: relative;
+}
+
+.xd-select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.xd-dropdown-arrow {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--xd-blue);
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+
+/* Footer & Button */
+.xd-footer {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.xd-submit-btn {
+  background-color: var(--xd-blue);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.xd-policy-text {
+  font-size: 0.85rem;
+  color: var(--xd-blue);
+  line-height: 1.4;
+}
+
+.xd-policy-text a {
+  color: var(--xd-blue);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .xd-main-form { padding: 25px; }
+  .xd-half { flex: 1 1 100%; }
+  .xd-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

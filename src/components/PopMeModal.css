@@ -1,0 +1,134 @@
+/* Overlay styles */
+.popme-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Modal Container */
+.popme-modal {
+    position: relative;
+    background-color: #0056ac;
+    width: 100%;
+    max-width: 900px;
+    max-height: 80vh;
+    padding: 20px;
+    border-radius: 4px;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-top: 75px;
+}
+/* Close Button */
+.popme-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #002d4b;
+    font-weight: bold;
+    font-family: emoji;
+}
+
+/* Title Styling */
+.popme-title {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 0px;
+    font-family: 'Mambality';
+    letter-spacing: 1px;
+}
+/* Flex Container for items */
+.popme-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* Individual Location Item */
+.popme-item {
+    display: flex;
+    align-items: center;
+    width: 33.33%;
+    padding: 10px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.popme-item:hover {
+  opacity: 0.8;
+}
+
+/* Pin Icon */
+.popme-icon {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+  border: 4px solid #fecb00; /* Yellow border around white pin */
+}
+
+.popme-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #000;
+}
+
+.popme-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.popme-city {
+    color: #fac90e;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: 'Levenim MT';
+}
+
+.popme-phone {
+    color: white;
+    font-size: 1rem;
+    font-family: 'levenim';
+}
+
+/* RESPONSIVENESS (Flexbox logic) */
+
+/* 2 Columns on Tablets */
+@media (max-width: 850px) {
+  .popme-item {
+    width: 50%;
+  }
+}
+
+/* 1 Column on Mobile */
+@media (max-width: 500px) {
+  .popme-item {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .popme-title {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,292 @@
+:root {
+    --primary: #0056ac;
+    --bg-soft: #f4f7f5;
+    --text-dark: #1a1c1e;
+    --text-grey: #0056ac;
+    --radius-lg: 16px;
+    /* Fluid calculations */
+    --gap: clamp(12px, 4vw, 20px);
+}
+
+.mobile-app-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #f5f5de;
+}
+
+.mobile-category-outer {
+    position: sticky;
+    top: 43px;
+    z-index: 100;
+    background: #f5f5de;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-category-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 0px 15px;
+    scrollbar-width: none;
+}
+.mobile-category-list::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-category-card {
+    flex: 0 0 clamp(80px, 24vw, 95px) !important;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    padding: 10px 0px;
+}
+
+
+
+.mobile-category-img-box img {
+    width: 85%;
+    object-fit: contain;
+}
+
+.mobile-category-name {
+    font-size: clamp(10px, 2.5vw, 11px);
+    font-weight: 600;
+    text-transform: unset;
+    color: var(--text-grey);
+    display: block;
+    line-height: 1.2;
+    height: 2.4em;
+    overflow: hidden;
+    font-family: 'levenim';
+}
+.mobile-arrow {
+    position: absolute;
+    width: 24px;
+    height: 38px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    z-index: 5;
+}
+
+.mobile-arrow.left {
+    left: 8px;
+    margin-top: -30px;
+}
+
+.mobile-arrow.right {
+    right: 8px;
+        margin-top: -30px;
+}
+
+/* Menu List */
+.mobile-menu-content {
+    padding: 0 var(--gap);
+}
+
+.mobile-group-header {
+    padding: 25px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.mobile-group-title {
+    font-size: clamp(1.2rem, 6vw, 1.5rem) !important;
+    font-weight: 100;
+    color: #0056ac;
+    text-transform: lowercase !important;
+}
+
+.mobile-item-count {
+    font-size: 12px;
+    color: var(--text-grey);
+    font-weight: 600;
+}
+
+.mobile-product-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-product-info {
+    flex: 1;
+}
+
+.mobile-title-row {
+    display: flex;
+    align-items: flex-start;
+    max-width: 245px;
+    gap: 6px;
+    margin-bottom: 5px;
+}
+
+.mobile-diet-type {
+    width: 14px;
+    height: 15px;
+}
+
+.mobile-item-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0056ac;
+    font-family: 'Levenim MT';
+    margin: 0;
+}
+
+.mobile-item-desc {
+    font-size: 13px;
+    color: var(--text-grey);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Image & Add Button */
+.mobile-product-visual {
+    flex: 0 0 110px;
+    border: 2px solid #0056ac;
+    border-radius: 20px;
+}
+.mobile-img-container {
+    position: relative;
+    width: 110px;
+    height: 110px;
+}
+
+.mobile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+
+/* ... (Previous root variables remain same) ... */
+
+.mobile-category-card {
+    flex: 0 0 clamp(80px, 24vw, 95px) !important;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+}
+
+/* ✅ Active Tab Highlight */
+.mobile-category-card.is-active {
+    opacity: 1;
+
+}
+
+.mobile-category-card.is-active .mobile-category-img-box {
+    border: 2px solid var(--primary);
+
+}
+
+.mobile-category-card.is-active .mobile-category-name {
+    color: var(--primary);
+   
+}
+
+.mobile-category-img-box {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    border: 2px solid var(--primary);
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    transition: all 0.3s ease;
+}
+
+.mobile-category-name {
+    font-size: clamp(10px, 2.5vw, 11px);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-grey);
+    display: block;
+    line-height: 1.2;
+    height: 2.4em;
+    /* Ensures 2-line alignment */
+    overflow: hidden;
+}
+
+/* Product list transitions */
+.mobile-menu-group {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.mobile-add-btn {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: #0056ac;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    width: 24px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-add-btn:active {
+    background: #f0f0f0;
+    transform: translateX(-50%) scale(0.95);
+}
+
+/* ... keep your existing styles ... */
+
+.mobile-arrow {
+    transition: opacity 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+/* Style for disabled arrows */
+.mobile-arrow.is-disabled {
+    opacity: 0; /* Or use 0.3 if you want them visible but faded */
+    pointer-events: none; /* Prevents clicks */
+}
+
+
+/* Refined Arrow Positions */
+.mobile-arrow.left {
+    left: 4px;
+}
+
+.mobile-arrow.right {
+    right: 4px;
+}

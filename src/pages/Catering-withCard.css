@@ -1,0 +1,570 @@
+.Catering {
+    width: 100%;
+    max-width: 1200px;
+    height: 3140px;
+    margin: 100px auto;
+    padding-bottom: 200px;
+    margin-top: 822px;
+    position: relative;
+}
+
+.desktop-ct {
+    margin-top: 546px;
+    position: absolute;
+    width: 100%;
+}
+.cover-img {
+    width: 392.601px;
+    height: auto !important;
+    filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.32));
+}
+
+.cvb-card-content {
+    color: #005696;
+}
+
+.lkjl {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.mnjkjo {
+    margin-left: 12px;
+}
+
+.catering-cx {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 262px;
+}
+
+.kjhs {
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 580px;
+    margin-left: 50px;
+}
+
+.catering-cd {
+    width: 84%;
+    height: 445px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: -40px;
+}
+
+
+.cateringBox {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    list-style: none;
+    color: #f5f5de;
+    font-size: 10px;
+    margin-left: 92px;
+    margin-top: 125px;
+    font-family: 'levenim';
+}
+
+.price-p {
+    position: absolute;
+    margin-top: 346px;
+    color: #f5f5de;
+    font-family: 'Mambality';
+    margin-left: 87px;
+    text-transform: lowercase;
+    font-size: 47px;
+}
+
+.lkjo {
+    font-size: 9px;
+    font-family: 'levenim';
+    text-align: center;
+    margin-top: -8px;
+}
+
+
+
+.cateringBox-2 {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    list-style: none;
+    color: #f5f5de;
+    font-size: 10px;
+    margin-left: 412px;
+    margin-top: 125px;
+    font-family: 'levenim';
+}
+
+.price-p-2 {
+    position: absolute;
+    margin-top: 346px;
+    color: #f5f5de;
+    font-family: 'Mambality';
+    margin-left: 406px;
+    text-transform: lowercase;
+    font-size: 47px;
+}
+
+
+
+.cateringBox-3 {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    list-style: none;
+    color: #f5f5de;
+    font-size: 10px;
+    margin-left: 760px;
+    margin-top: 125px;
+    font-family: 'levenim';
+}
+
+.price-p-3 {
+    position: absolute;
+    margin-top: 346px;
+    color: #f5f5de;
+    font-family: 'Mambality';
+    margin-left: 728px;
+    text-transform: lowercase;
+    font-size: 47px;
+}
+
+
+
+
+/* Container styling */
+.cvb-catering-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.mb-dis {
+    display: none;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cxz-toggle-item>span {
+    margin-top: 2px;
+    display: inline-block;
+}
+
+/* Horizontal Scroll Logic for Mobile & Tabs */
+@media screen and (max-width: 1024px) and (min-width: 767px) {
+
+    .mb-dis {
+        display: none;
+    }
+
+    .cvb-catering-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        /* Snaps cards into place */
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scroll for iOS */
+        padding-bottom: 30px;
+        /* Space for scrollbar if visible */
+
+    }
+
+    .cvb-card {
+        min-width: 280px;
+        /* Ensures cards don't shrink too small */
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+    }
+
+    /* Card Styling */
+    .cvb-card {
+        background: #f5f5de;
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #0e5aa8;
+    }
+
+    .cvb-card-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .cvb-card-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    .cvb-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+
+    .cvb-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.95rem;
+        color: #444;
+    }
+
+    /* Price Section */
+    .cvb-price-box {
+        text-align: center;
+        background: #0e5aa8;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .cvb-amount {
+        display: block;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #ffffff;
+        font-family: 'levenim';
+    }
+
+    .cvb-min-order {
+        font-size: 0.8rem;
+        color: #fffdfd;
+        font-family: 'levenim';
+    }
+
+    /* Hide scrollbar for a cleaner look (optional) */
+    .cvb-catering-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cvb-catering-container {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .catering-cx {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        margin-top: 65px;
+    }
+
+    .catering-cx>img {
+        display: none;
+    }
+
+    .kjhs {
+        position: relative;
+        margin: 0 auto;
+        margin-top: 580px;
+        margin-left: 50px;
+        display: none;
+    }
+
+    .Catering {
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        margin: 100px auto;
+        padding-bottom: 200px;
+        margin-top: 90px;
+        position: relative;
+        overflow: hidden;
+        margin-top: 65px;
+    }
+
+    .catering-cd {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 0;
+    }
+
+    .cxz-toggle-container {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 65px !important;
+    }
+
+    .cdx-container {
+        padding: 40px;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        min-height: 400px;
+        margin-top: 60px;
+    }
+
+    .mobile-mrg {
+        margin-top: 85px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+    .mb-dis {
+        display: inline-block;
+    }
+
+    .mobile-mrg {
+        margin-top: 85px;
+    }
+
+    .catering-cx>img {
+        display: none;
+    }
+
+    .Catering {
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        margin: 100px auto;
+        padding-bottom: 200px;
+        margin-top: auto;
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .kjhs {
+        display: none;
+    }
+
+
+
+    .cdx-container {
+        padding: 10px;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        min-height: 400px;
+        margin-top: 30px;
+    }
+
+    .fgc-menu-page {
+        padding: 20px;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 190px;
+    }
+
+
+
+    .cxz-toggle-container {
+        position: relative !important;
+        width: 100% !important;
+
+    }
+
+
+
+
+    .cdx-tab-btn {
+        flex: 1;
+        padding: 15px 5px;
+        background: transparent;
+        border: none;
+        border-right: 1px solid #005696;
+        cursor: pointer;
+        color: #005696;
+        font-weight: 600;
+        font-size: 11px;
+        transition: all 0.2s ease;
+    }
+
+
+    .cover-img {
+        width: 50%;
+        height: auto;
+        filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.32));
+    }
+
+    .cdx-tab-btn.cdx-active {
+        background-color: transparent;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
+        font-weight: 400;
+    }
+
+
+    .cvb-catering-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        /* Snaps cards into place */
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scroll for iOS */
+        padding-bottom: 30px;
+        /* Space for scrollbar if visible */
+
+    }
+
+    .cvb-card {
+        min-width: 280px;
+        /* Ensures cards don't shrink too small */
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+    }
+
+    /* Card Styling */
+    .cvb-card {
+        background: #f5f5de;
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #0e5aa8;
+    }
+
+    .cvb-card-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .cvb-card-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    .cvb-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+
+    .cvb-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.95rem;
+        color: #444;
+    }
+
+    /* Price Section */
+    .cvb-price-box {
+        text-align: center;
+        background: #0e5aa8;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .cvb-amount {
+        display: block;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #ffffff;
+        font-family: 'levenim';
+    }
+
+    .cvb-min-order {
+        font-size: 0.8rem;
+        color: #fffdfd;
+        font-family: 'levenim';
+    }
+
+    /* Hide scrollbar for a cleaner look (optional) */
+    .cvb-catering-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cvb-catering-container {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .mnjkjo {
+        margin-left: 0;
+    }
+
+    .lkjl {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+        flex-direction: column;
+    }
+
+
+    .catering-cx {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        margin-top: 65px;
+    }
+
+    .imageCover {
+        width: 100%;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        background-image: url(/catering.svg);
+        background-position-x: center;
+        background-repeat: no-repeat;
+        margin-top: -91px;
+        position: absolute;
+        left: 0;
+        justify-content: center;
+    }
+
+    .cdx-container {
+        padding: 10px;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        min-height: 400px;
+        margin-top: 60px;
+        scale: 0.98;
+    }
+
+    .cdx-label {
+        font-weight: 900;
+        margin-right: 8px;
+        width: 243px;
+        display: inline-block;
+    }
+
+
+
+
+}

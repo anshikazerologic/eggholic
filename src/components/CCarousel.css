@@ -1,0 +1,55 @@
+/* Wrapper */
+.cc-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* for tablets */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 16px;
+
+}
+
+/* Slides container */
+.cc-slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+
+/* Each slide */
+.cc-slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cc-slide img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 20/9; /* maintains ratio */
+  object-fit: cover;
+}
+
+/* Indicators */
+.cc-indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.cc-dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cc-dot.cc-active {
+  background: #fff;
+}
