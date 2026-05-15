@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet-async';
 
 import './Catering.css';
 
-import '../components/Foodmenu.css';
+import '../components/FoodMenu.css';
 import '../components/Bite.css';
 
 import MoonCatering from '../components/MoonCatering';
